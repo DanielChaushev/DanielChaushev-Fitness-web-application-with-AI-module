@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хранене</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.46.0/tabler-icons.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-size: 22px; margin-bottom: 8px;">Хранене</h1>
+
+        <p class="stat-label" style="margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.4px;">Дневен баланс</p>
+        <input type="date" id="summary-date" style="margin-bottom: 12px;">
+
+        <div class="stats-grid">
+            <div class="card">
+                <p class="stat-label">Калории</p>
+                <p id="sum-calories" class="numeric stat-value" style="font-size: 20px;">—</p>
+            </div>
+            <div class="card">
+                <p class="stat-label">Белтъчини</p>
+                <p id="sum-protein" class="numeric stat-value" style="font-size: 20px;">—</p>
+            </div>
+            <div class="card">
+                <p class="stat-label">Въглехидрати</p>
+                <p id="sum-carbs" class="numeric stat-value" style="font-size: 20px;">—</p>
+            </div>
+            <div class="card">
+                <p class="stat-label">Мазнини</p>
+                <p id="sum-fat" class="numeric stat-value" style="font-size: 20px;">—</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 style="font-size: 16px; margin-bottom: 12px;">Добавете храна</h2>
+            <p class="error-message" id="meal-error"></p>
+
+            <div style="position: relative;">
+                <i class="ti ti-search" style="position: absolute; left: 12px; top: 14px; color: var(--text-muted); font-size: 16px;"></i>
+                <input type="text" id="food-search" placeholder="Търсене на храна" style="padding-left: 36px;">
+            </div>
+            <div id="food-results"></div>
+
+            <input type="hidden" id="selected-food-id">
+            <div id="selected-food-chip"></div>
+
+            <input type="number" id="meal-grams" placeholder="Количество (гр)">
+            <button id="add-meal-btn">Добави</button>
+        </div>
+
+        <p class="stat-label" style="margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.4px;">Днешни хранения</p>
+        <div id="meals-list"></div>
+    </div>
+
+    <nav>
+        <a href="dashboard.html"><i class="ti ti-user"></i><span>Профил</span></a>
+        <a href="workouts.html"><i class="ti ti-barbell"></i><span>Тренировки</span></a>
+        <a href="nutrition.html" class="active"><i class="ti ti-salad"></i><span>Хранене</span></a>
+        <a href="progress.html"><i class="ti ti-chart-line"></i><span>Прогрес</span></a>
+        <a href="ai.html"><i class="ti ti-sparkles"></i><span>AI План</span></a>
+    </nav>
+
+    <script src="js/api.js"></script>
+    <script src="js/nutrition.js"></script>
+</body>
+</html>

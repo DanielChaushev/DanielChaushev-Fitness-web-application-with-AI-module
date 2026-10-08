@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детайли на тренировка</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.46.0/tabler-icons.min.css">
+</head>
+<body>
+    <div class="container">
+        <a href="workouts.html" class="link back-link">&larr; Назад</a>
+
+        <h1 id="workout-title" class="page-title">Тренировка</h1>
+        <p id="workout-date" class="page-subtitle"></p>
+
+        <div class="card">
+            <p class="stat-label">Общ обем на тренировката</p>
+            <p id="total-volume" class="numeric stat-value">—</p>
+            <p class="stat-sub">кг (серии × повторения × тежест)</p>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">Нова серия</h2>
+            <p class="error-message" id="set-error"></p>
+
+            <select id="exercise-select"></select>
+
+            <input type="number" id="reps-input" placeholder="Повторения">
+            <input type="number" step="0.5" id="weight-input" placeholder="Тежест (кг)">
+            <button id="add-set-btn">Добавете серия</button>
+
+            <p class="link toggle-link" id="show-new-exercise">+ Ново упражнение</p>
+
+            <div id="new-exercise-form" class="hidden">
+                <input type="text" id="new-exercise-name" placeholder="Име на упражнение">
+                <input type="text" id="new-exercise-muscle" placeholder="Мускулна група">
+                <button id="save-new-exercise-btn">Запазете упражнение</button>
+            </div>
+        </div>
+
+        <div id="sets-list"></div>
+    </div>
+
+    <nav>
+        <a href="dashboard.html"><i class="ti ti-user"></i><span>Профил</span></a>
+        <a href="workouts.html" class="active"><i class="ti ti-barbell"></i><span>Тренировки</span></a>
+        <a href="nutrition.html"><i class="ti ti-salad"></i><span>Хранене</span></a>
+        <a href="progress.html"><i class="ti ti-chart-line"></i><span>Прогрес</span></a>
+        <a href="ai.html"><i class="ti ti-sparkles"></i><span>AI План</span></a>
+    </nav>
+
+    <script src="js/api.js"></script>
+    <script src="js/workout-detail.js"></script>
+</body>
+</html>

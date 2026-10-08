@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="center-page">
+        <div class="card" id="login-card">
+            <h2 class="form-title">Вход</h2>
+            <p class="error-message" id="login-error"></p>
+            <input type="email" id="login-email" placeholder="Имейл">
+            <input type="password" id="login-password" placeholder="Парола">
+            <button id="login-btn">Вход</button>
+            <p class="form-footer">
+                Нямате профил? <a href="#" class="link" id="show-register">Регистрирайте се</a>
+            </p>
+        </div>
+
+        <div class="card hidden" id="register-card">
+            <h2 class="form-title">Регистрация</h2>
+            <p class="error-message" id="register-error"></p>
+            <input type="text" id="register-firstName" placeholder="Име">
+            <input type="text" id="register-lastName" placeholder="Фамилия">
+            <input type="email" id="register-email" placeholder="Имейл">
+            <input type="password" id="register-password" placeholder="Парола">
+            <label class="field-label">Изберете пол</label>
+            <select id="register-gender">
+                <option value="male">Мъж</option>
+                <option value="female">Жена</option>
+            </select>
+            <input type="number" id="register-age" placeholder="Възраст">
+            <input type="number" step="0.1" id="register-height" placeholder="Ръст (см)">
+            <input type="number" step="0.1" id="register-weight" placeholder="Тегло (кг)">
+            <label class="field-label">Изберете цел</label>
+            <select id="register-goal">
+                <option value="покачване на мускулна маса">Покачване на мускулна маса</option>
+                <option value="отслабване">Отслабване</option>
+                <option value="поддържане на форма">Поддържане на форма</option>
+            </select>
+            <label class="field-label">Изберете ниво на активност</label>
+            <select id="register-activity">
+                <option value="sedentary">Заседнал начин на живот</option>
+                <option value="light" selected>Леко активен (1-2 тренировки/седмица)</option>
+                <option value="moderate">Умерено активен (3-4 тренировки/седмица)</option>
+                <option value="active">Активен (5-6 тренировки/седмица)</option>
+                <option value="very_active">Много активен (ежедневни тренировки)</option>
+            </select>
+            <button id="register-btn">Регистриране</button>
+            <p class="form-footer">
+                Вече имате профил? <a href="#" class="link" id="show-login">Вход</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

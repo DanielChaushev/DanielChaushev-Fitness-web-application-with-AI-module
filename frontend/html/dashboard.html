@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Табло</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.46.0/tabler-icons.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-size: 22px; margin-bottom: 4px;" id="greeting">Здравейте</h1>
+
+        <div class="stats-grid">
+            <div class="card">
+                <p class="stat-label">Индекс на телесна маса</p>
+                <p id="bmi-value" class="numeric stat-value">—</p>
+                <p id="bmi-category" class="stat-sub">Няма данни</p>
+            </div>
+
+            <div class="card">
+                <p class="stat-label">Цел за деня</p>
+                <p id="calorie-needs" class="numeric stat-value">—</p>
+                <p class="stat-sub">ккал</p>
+            </div>
+
+            <div class="card">
+                <p class="stat-label">Седмичен прогрес</p>
+                <p id="weight-trend" class="numeric stat-value">—</p>
+                <p class="stat-sub">кг / седмица</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <p class="stat-label" style="margin-bottom: 6px;">Лични данни</p>
+            <div class="profile-row"><span>Тегло</span><span class="numeric" id="p-weight">—</span></div>
+            <div class="profile-row"><span>Ръст</span><span class="numeric" id="p-height">—</span></div>
+            <div class="profile-row"><span>Възраст</span><span class="numeric" id="p-age">—</span></div>
+            <div class="profile-row"><span>Цел</span><span id="p-goal">—</span></div>
+            <div class="profile-row"><span>Ниво на активност</span><span id="p-activity">—</span></div>
+        </div>
+
+        <button id="logout-btn" style="background: transparent; border: 1px solid var(--border); color: var(--text-muted); margin-top: 16px;">Изход</button>
+    </div>
+
+    <nav>
+        <a href="dashboard.html" class="active"><i class="ti ti-user"></i><span>Профил</span></a>
+        <a href="workouts.html"><i class="ti ti-barbell"></i><span>Тренировки</span></a>
+        <a href="nutrition.html"><i class="ti ti-salad"></i><span>Хранене</span></a>
+        <a href="progress.html"><i class="ti ti-chart-line"></i><span>Прогрес</span></a>
+        <a href="ai.html"><i class="ti ti-sparkles"></i><span>AI План</span></a>
+    </nav>
+
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

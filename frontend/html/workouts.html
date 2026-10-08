@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренировки</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.46.0/tabler-icons.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-size: 22px; margin-bottom: 24px;">Вашите тренировки</h1>
+
+        <div class="card">
+            <h2 style="font-size: 16px; margin-bottom: 12px;">Нова тренировка</h2>
+            <p class="error-message" id="workout-error"></p>
+            <input type="date" id="workout-date">
+            <input type="text" id="workout-notes" placeholder="напр. (тренировка А)">
+            <button id="add-workout-btn">Добавете тренировка</button>
+        </div>
+
+        <div id="workouts-list"></div>
+    </div>
+
+    <nav>
+        <a href="dashboard.html"><i class="ti ti-user"></i><span>Профил</span></a>
+        <a href="workouts.html" class="active"><i class="ti ti-barbell"></i><span>Тренировки</span></a>
+        <a href="nutrition.html"><i class="ti ti-salad"></i><span>Хранене</span></a>
+        <a href="progress.html"><i class="ti ti-chart-line"></i><span>Прогрес</span></a>
+        <a href="ai.html"><i class="ti ti-sparkles"></i><span>AI План</span></a>
+    </nav>
+
+    <script src="js/api.js"></script>
+    <script src="js/workouts.js"></script>
+</body>
+</html>

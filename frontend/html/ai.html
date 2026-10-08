@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI План</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.46.0/tabler-icons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/18.0.9/lib/marked.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-size: 22px; margin-bottom: 24px;">AI План</h1>
+
+        <div class="card">
+            <p style="color: var(--text-muted); margin-bottom: 16px; font-size: 14px;">
+                Генерира комбиниран тренировъчен и хранителен план на база профила Ви.
+            </p>
+            <p class="error-message" id="ai-error"></p>
+
+            <label class="field-label">Колко пъти седмично искате да тренирате?</label>
+            <select id="days-select">
+                <option value="2">2 дни седмично</option>
+                <option value="3">3 дни седмично</option>
+                <option value="4" selected>4 дни седмично</option>
+                <option value="5">5 дни седмично</option>
+                <option value="6">6 дни седмично</option>
+            </select>
+
+            <button id="generate-btn">Генерирайте план</button>
+        </div>
+
+        <div id="plans-list"></div>
+    </div>
+
+    <nav>
+        <a href="dashboard.html"><i class="ti ti-user"></i><span>Профил</span></a>
+        <a href="workouts.html"><i class="ti ti-barbell"></i><span>Тренировки</span></a>
+        <a href="nutrition.html"><i class="ti ti-salad"></i><span>Хранене</span></a>
+        <a href="progress.html"><i class="ti ti-chart-line"></i><span>Прогрес</span></a>
+        <a href="ai.html" class="active"><i class="ti ti-sparkles"></i><span>AI План</span></a>
+    </nav>
+
+    <script src="js/api.js"></script>
+    <script src="js/ai.js"></script>
+</body>
+</html>
