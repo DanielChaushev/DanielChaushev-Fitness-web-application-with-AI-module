@@ -21,6 +21,7 @@ A comprehensive full-stack web application developed as a bachelor's thesis proj
 - Spring Boot
 - Spring Data JPA (Hibernate)
 - Spring Security & JWT
+- Gradle
 
 ### **Database:**
 - MySQL (Relational database with optimized schema for users, workouts, logs, and AI plans)
@@ -35,29 +36,31 @@ A comprehensive full-stack web application developed as a bachelor's thesis proj
 
 ---
 
+## 📁 Project Structure
+
+- `src/` – Spring Boot backend
+- `frontend/` – HTML, CSS and JavaScript client
+
+---
+
 ## ⚙️ Installation & Running Locally
 
+**Requirements:** Java 21, MySQL
+
 1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/DanielChaushev/Fitness-web-application-with-AI-module.git
-   ```
+```bash
+   git clone https://github.com/DanielChaushev/DanielChaushev-Fitness-web-application-with-AI-module.git
+```
 
 2. **Configure the Database:**
-   - Create a MySQL database.
-   - Update your `src/main/resources/application.properties` file with your database credentials:
+   - Create a MySQL database named `fitness_app`.
+   - Copy `src/main/resources/application.properties.example` to `src/main/resources/application.properties`.
+   - Fill in your MySQL username and password and your Google Gemini API key.
 
-     Properties
-     ```ini
-     spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name?useSSL=false&serverTimezone=UTC
-     spring.datasource.username=your_username
-     spring.datasource.password=your_password
-     ```
+3. **Run the backend:**
+```bash
+   ./gradlew bootRun
+```
+   On Windows use `gradlew.bat bootRun`. The API runs on `http://localhost:8080`.
 
-3. **Build and Run the Application:**
-
-   Bash
-   ```
-   mvn spring-boot:run
-   ```
-
-4. **Access the App:** Open your browser and navigate to `http://localhost:8080`.
+4. **Run the frontend:** open the `frontend/` folder in VS Code and start `frontend/html/index.html` with the **Live Server** extension.
